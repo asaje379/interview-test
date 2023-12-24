@@ -15,28 +15,5 @@
 //  the anagram set is "tones", "notes", "Seton".
 
 export function anagramSet(target: string, candidates: string[]) {
-  const lowerTarget = target.toLowerCase();
-  const result = [];
-
-  for (const candidate of candidates) {
-    if (isAnagram(lowerTarget, candidate.toLowerCase())) {
-      result.push(candidate);
-    }
-  }
-  return result;
-}
-
-/**
- * @param {string} target - The target word
- * @param {string} candidate - The candidate word
- */
-function isAnagram(target: string, candidate: string) {
-  if (target === candidate) return false;
-  if (target.length !== candidate.length) return false;
-
-  for (const char of candidate) {
-    if (!target.includes(char)) return false;
-  }
-
-  return true;
+  return [];
 }
